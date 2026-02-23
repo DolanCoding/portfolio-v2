@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getImagePath } from "@/lib/paths";
 
 export default function Hero() {
@@ -36,12 +35,10 @@ export default function Hero() {
           {/* Image Placeholder */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md aspect-square rounded-2xl bg-gray-900 border-2 border-gray-800 overflow-hidden">
-              <Image
+              <img
                 src={getImagePath("/profile.png")}
                 alt="Sascha Fischer"
-                fill
-                className="object-cover"
-                priority
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
