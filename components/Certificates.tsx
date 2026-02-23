@@ -1,3 +1,5 @@
+import { getImagePath } from "@/lib/paths";
+
 export default function Certificates() {
   const certificates = [
     {
@@ -43,7 +45,7 @@ export default function Certificates() {
                   <p className="text-gray-500 text-xs">{cert.date}</p>
                 </div>
                 <a
-                  href={cert.credential}
+                  href={getImagePath(cert.credential)}
                   target={cert.credential !== "#" ? "_blank" : undefined}
                   rel={cert.credential !== "#" ? "noopener noreferrer" : undefined}
                   className="text-gray-400 hover:text-white transition text-sm font-medium whitespace-nowrap"

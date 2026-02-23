@@ -1,3 +1,5 @@
+import { getImagePath } from "@/lib/paths";
+
 export default function Projects() {
   const projects = [
     {
@@ -26,7 +28,7 @@ export default function Projects() {
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden bg-slate-700">
                 <img
-                  src={project.image}
+                  src={getImagePath(project.image)}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
